@@ -43,6 +43,8 @@ Reject H0: women's matches score significantly more goals.
 
 **The verdict: p = 0.0051 < 0.10 → reject H₀.** The gut instinct was right, and now it's backed by statistics: women's FIFA World Cup matches score significantly more goals than men's (about half a goal more per match on average).
 
+**Data coverage (verified against the datasets):** the data ends in 2022 — it spans the men's World Cups **2002-2022** (384 matches, up to the Qatar 2022 final) and the women's World Cups **2003-2019** (200 matches, up to the France 2019 final). The 2023 Women's World Cup and the 2026 World Cup are **not** included; re-running the analysis with the newer tournaments is a natural next step.
+
 ![Goals distribution](images/goals_distribution.png)
 
 ### Run it
@@ -100,6 +102,8 @@ Se rechaza H0: los partidos femeninos anotan significativamente más goles.
 ```
 
 **El veredicto: p = 0.0051 < 0.10 → se rechaza H₀.** El instinto era correcto, y ahora tiene respaldo estadístico: en las Copas del Mundo femeninas se anotan significativamente más goles que en las masculinas (aproximadamente medio gol más por partido en promedio).
+
+**Cobertura de los datos (verificada contra los datasets):** los datos llegan hasta 2022 — abarcan los mundiales masculinos **2002-2022** (384 partidos, hasta la final de Qatar 2022) y los femeninos **2003-2019** (200 partidos, hasta la final de Francia 2019). El Mundial femenino 2023 y el Mundial 2026 **no** están incluidos; re-ejecutar el análisis con los torneos nuevos es el siguiente paso natural.
 
 ![Distribución de goles](images/goals_distribution.png)
 
