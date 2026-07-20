@@ -67,16 +67,17 @@ largest_std_dev = pd.DataFrame({
 })
 print(f"\nBorough with the largest spread:\n{largest_std_dev.to_string(index=False)}")
 
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(10, 6.5))
 std_colors = sns.color_palette("mako", n_colors=len(borough_stats))
 bars = plt.bar(borough_stats.index.astype(str), borough_stats["std"], color=std_colors, width=0.6)
 for bar, value in zip(bars, borough_stats["std"]):
     plt.text(bar.get_x() + bar.get_width() / 2, value + 3, f"{value:.0f}", ha="center", fontweight="bold")
-plt.title("Which borough has the most UNEQUAL school results?")
-plt.suptitle("Taller bar = bigger gap between the borough's best and worst schools (std of total SAT)", y=0.93, fontsize=9, color="#555555")
+plt.suptitle("Which borough has the most UNEQUAL school results?", fontsize=14, y=0.97)
+plt.title("Taller bar = bigger gap between the borough's best and worst schools (std of total SAT)",
+          fontsize=9, color="#555555", pad=12)
 plt.xlabel("")
 plt.ylabel("Inequality of results (std of total SAT)")
-plt.tight_layout()
+plt.tight_layout(rect=[0, 0, 1, 0.94])
 plt.savefig("images/borough_std.png", dpi=150)
 plt.close()
 
