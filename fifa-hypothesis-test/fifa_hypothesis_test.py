@@ -28,16 +28,29 @@ men_results = men_results[["home_score", "away_score"]]
 women_results["total"] = women_results["home_score"] + women_results["away_score"]
 men_results["total"] = men_results["home_score"] + men_results["away_score"]
 
+# Descriptive statistics
+women_mean, men_mean = women_results["total"].mean(), men_results["total"].mean()
+women_std, men_std = women_results["total"].std(), men_results["total"].std()
+women_n, men_n = len(women_results), len(men_results)
+
+print("=== Descriptive statistics (goals per match) ===")
+print(f"Women: n={women_n}, mean={women_mean:.2f}, std={women_std:.2f}")
+print(f"Men:   n={men_n}, mean={men_mean:.2f}, std={men_std:.2f}\n")
+
 # Goal distributions are not normal, so: Mann-Whitney U (non-parametric), one-sided
-p_value = pg.mwu(x=women_results["total"], y=men_results["total"], alternative="greater")
+mwu_result = pg.mwu(x=women_results["total"], y=men_results["total"], alternative="greater")
+
+# pingouin renamed the column across versions ('p-val' -> 'p_val'); support both
+p_col = "p_val" if "p_val" in mwu_result.columns else "p-val"
+p_val = float(mwu_result[p_col].iloc[0])
 
 alpha = 0.1
-if p_value["p-val"][0] < alpha:
+if p_val < alpha:
     print("Reject H0: women's matches score significantly more goals.")
-    result_dict = {"p_val": p_value["p-val"][0], "result": "reject"}
+    result_dict = {"p_val": p_val, "result": "reject"}
 else:
     print("Fail to reject H0: not enough evidence that women's matches score more goals.")
-    result_dict = {"p_val": p_value["p-val"][0], "result": "fail to reject"}
+    result_dict = {"p_val": p_val, "result": "fail to reject"}
 
 print(result_dict)
 
@@ -45,7 +58,7 @@ print(result_dict)
 plt.figure(figsize=(8, 5))
 plt.boxplot(
     [women_results["total"], men_results["total"]],
-    labels=["Women's World Cup", "Men's World Cup"],
+    tick_labels=["Women's World Cup", "Men's World Cup"],
 )
 plt.ylabel("Total goals per match")
 plt.title("Goals per match: Women's vs Men's FIFA World Cups (2002+)")
