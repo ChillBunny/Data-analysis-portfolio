@@ -62,8 +62,9 @@ crimes["Vict Age Label"] = pd.cut(
 victim_ages = crimes.groupby("Vict Age Label", observed=False)["Vict Age"].count()
 print(f"\nVictims by age group:\n{victim_ages}")
 
-plt.figure(figsize=(9, 5))
-sns.barplot(x=victim_ages.index, y=victim_ages.values, palette="ch:start=.2,rot=-.3", hue=victim_ages.index, legend=False)
+plt.figure(figsize=(10, 6))
+age_colors = sns.color_palette("ch:start=.2,rot=-.3", n_colors=len(victim_ages))
+plt.bar(victim_ages.index.astype(str), victim_ages.values, color=age_colors, width=0.7)
 plt.title("Crime victims by age group")
 plt.xlabel("Age group")
 plt.ylabel("Frequency")
@@ -85,7 +86,8 @@ print(f"\nCrimes by season:\n{crimes_season}")
 
 plt.figure(figsize=(8, 5))
 season_palette = {"Spring": "tab:green", "Summer": "tab:red", "Fall": "tab:orange", "Winter": "tab:blue"}
-sns.barplot(x=crimes_season.index, y=crimes_season.values, palette=season_palette, hue=crimes_season.index, legend=False)
+season_colors = [season_palette[s] for s in crimes_season.index]
+plt.bar(crimes_season.index.astype(str), crimes_season.values, color=season_colors, width=0.6)
 plt.title("Crimes by season")
 plt.xlabel("Season")
 plt.ylabel("Frequency")
@@ -122,12 +124,20 @@ plt.savefig("images/top_weapons.png", dpi=150)
 plt.close()
 
 # --- 7. Victim sex ------------------------------------------------------------
+# Data-quality note: the dictionary only defines F, M and X. A handful of records
+# carry other codes (e.g. 'H') — invalid entries, excluded from the chart.
 
-vict_sex = crimes["Vict Sex"].value_counts()
-print(f"\nVictims by sex:\n{vict_sex}")
+vict_sex_raw = crimes["Vict Sex"].value_counts()
+invalid_sex = vict_sex_raw[~vict_sex_raw.index.isin(["F", "M", "X"])]
+if len(invalid_sex) > 0:
+    print(f"\nData-quality note — invalid sex codes excluded: {invalid_sex.to_dict()}")
+
+vict_sex = vict_sex_raw[vict_sex_raw.index.isin(["F", "M", "X"])]
+print(f"\nVictims by sex (valid codes):\n{vict_sex}")
 
 plt.figure(figsize=(7, 5))
-sns.barplot(x=vict_sex.index, y=vict_sex.values, palette="Set2", hue=vict_sex.index, legend=False)
+sex_colors = sns.color_palette("Set2", n_colors=len(vict_sex))
+plt.bar(vict_sex.index.astype(str), vict_sex.values, color=sex_colors, width=0.6)
 plt.title("Crime victims by sex (F: female, M: male, X: unknown)")
 plt.xlabel("Victim sex")
 plt.ylabel("Frequency")

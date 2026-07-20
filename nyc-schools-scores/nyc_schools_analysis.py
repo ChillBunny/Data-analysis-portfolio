@@ -67,11 +67,15 @@ largest_std_dev = pd.DataFrame({
 })
 print(f"\nBorough with the largest spread:\n{largest_std_dev.to_string(index=False)}")
 
-plt.figure(figsize=(9, 5))
-sns.barplot(x=borough_stats.index, y=borough_stats["std"], palette="mako", hue=borough_stats.index, legend=False)
-plt.title("Spread of total SAT scores by borough (standard deviation)")
+plt.figure(figsize=(10, 6))
+std_colors = sns.color_palette("mako", n_colors=len(borough_stats))
+bars = plt.bar(borough_stats.index.astype(str), borough_stats["std"], color=std_colors, width=0.6)
+for bar, value in zip(bars, borough_stats["std"]):
+    plt.text(bar.get_x() + bar.get_width() / 2, value + 3, f"{value:.0f}", ha="center", fontweight="bold")
+plt.title("Which borough has the most UNEQUAL school results?")
+plt.suptitle("Taller bar = bigger gap between the borough's best and worst schools (std of total SAT)", y=0.93, fontsize=9, color="#555555")
 plt.xlabel("")
-plt.ylabel("Std of total SAT")
+plt.ylabel("Inequality of results (std of total SAT)")
 plt.tight_layout()
 plt.savefig("images/borough_std.png", dpi=150)
 plt.close()
@@ -87,17 +91,35 @@ plt.tight_layout()
 plt.savefig("images/borough_distributions.png", dpi=150)
 plt.close()
 
-# --- 5. Are the three sections correlated? ------------------------------------
+# --- 5. Does being good at one section predict the others? --------------------
 
 corr = schools[["average_math", "average_reading", "average_writing"]].corr().round(3)
-print(f"\n=== Correlation between SAT sections ===")
-print(corr)
+r_read_write = corr.loc["average_reading", "average_writing"]
+r_math_read = corr.loc["average_math", "average_reading"]
+print(f"\n=== Relationship between SAT sections ===")
+print(f"Reading vs Writing: r = {r_read_write}")
+print(f"Math vs Reading:    r = {r_math_read}")
 
-plt.figure(figsize=(7, 5))
-sns.heatmap(corr, annot=True, cmap="crest", vmin=0.9, vmax=1)
-plt.title("Correlation between SAT sections")
+fig, axes = plt.subplots(1, 2, figsize=(13, 5.5))
+sns.regplot(
+    data=schools, x="average_reading", y="average_writing", ax=axes[0],
+    scatter_kws={"alpha": 0.4, "color": "#2C4E80"}, line_kws={"color": "#B81D24"},
+)
+axes[0].set_title(f"Reading vs Writing — r = {r_read_write}")
+axes[0].set_xlabel("Average reading score")
+axes[0].set_ylabel("Average writing score")
+
+sns.regplot(
+    data=schools, x="average_math", y="average_reading", ax=axes[1],
+    scatter_kws={"alpha": 0.4, "color": "#2C4E80"}, line_kws={"color": "#B81D24"},
+)
+axes[1].set_title(f"Math vs Reading — r = {r_math_read}")
+axes[1].set_xlabel("Average math score")
+axes[1].set_ylabel("Average reading score")
+
+fig.suptitle("Each dot is a school: being good at one section predicts being good at the others", fontsize=12)
 plt.tight_layout()
-plt.savefig("images/section_correlation.png", dpi=150)
+plt.savefig("images/section_relationship.png", dpi=150)
 plt.close()
 
 print("\nCharts saved to images/")

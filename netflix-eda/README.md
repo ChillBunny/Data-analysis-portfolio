@@ -44,6 +44,12 @@ You work for a production company that specializes in nostalgic styles. You want
 #### Top 10 producing countries
 ![Top countries](images/top_countries.png)
 
+#### Titles by release year: how the catalog grew
+![Releases per year](images/releases_per_year.png)
+
+#### Movie duration by genre (whole catalog)
+![Duration by genre](images/duration_by_genre.png)
+
 #### The 1990s: duration distribution
 ![Nineties durations](images/nineties_durations.png)
 
@@ -106,6 +112,12 @@ Trabajas para una productora especializada en estilos nostálgicos. Quieres inve
 
 #### Top 10 países productores
 ![Top países](images/top_countries.png)
+
+#### Títulos por año de lanzamiento: cómo creció el catálogo
+![Lanzamientos por año](images/releases_per_year.png)
+
+#### Duración de películas por género (catálogo completo)
+![Duración por género](images/duration_by_genre.png)
 
 #### Los años 90: distribución de duraciones
 ![Duraciones de los 90](images/nineties_durations.png)

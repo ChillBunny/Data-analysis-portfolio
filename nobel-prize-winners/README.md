@@ -1,4 +1,4 @@
-# Visualizing the History of Nobel Prize Winners / Visualizando la historia de los ganadores del Premio Nobel
+﻿# Visualizing the History of Nobel Prize Winners / Visualizando la historia de los ganadores del Premio Nobel
 
 ## 🇬🇧 English version
 
@@ -64,15 +64,15 @@ La Fundación Nobel publicó un dataset con todos los ganadores desde 1901 hasta
 **El dataset:** 1,000 premios otorgados entre 1901 y 2023.
 
 1. **Género y país de nacimiento más premiados:** masculino, y **Estados Unidos**.
-2. **Década con mayor proporción de ganadores nacidos en EE.UU.: los 2000s**, cuando el **42.3%** de todos los laureados nacieron allí. *(Mi código original contaba victorias absolutas; la respuesta correcta del brief requiere la proporción — corregido aquí.)*
-3. **Década + categoría con mayor proporción de laureadas: Literatura en los 2020s (50%)** — el análisis que mi notebook original dejó inconcluso, ahora completo, con un heatmap de la proporción femenina en cada década y categoría.
-4. **Primera mujer laureada: Marie Curie, née Sklodowska (Física, 1903).**
+2. **Década con mayor proporción de ganadores nacidos en EE.UU.: los 2000s**, cuando el **42.3%** de todos los ganadores nacieron allí. *(Mi código original contaba victorias absolutas; la respuesta correcta del brief requiere la proporción — corregido aquí.)*
+3. **Década + categoría con mayor proporción de ganadoras: Literatura en los 2020s (50%)** — el análisis que mi notebook original dejó inconcluso, ahora completo, con un heatmap de la proporción femenina en cada década y categoría.
+4. **Primera mujer ganadora: Marie Curie, née Sklodowska (Física, 1903).**
 5. **Ganadores múltiples (6):** Marie Curie, el Comité Internacional de la Cruz Roja, Linus Carl Pauling, el ACNUR, John Bardeen y Frederick Sanger.
 
-#### Top 10 países de nacimiento de los laureados
+#### Top 10 países de nacimiento de los ganadores (los 'laureados', como se les llama oficialmente)
 ![Top países](images/top_countries.png)
 
-#### Proporción de laureados nacidos en EE.UU. por década
+#### Proporción de ganadores nacidos en EE.UU. por década
 ![Proporción EE.UU. por década](images/us_ratio_by_decade.png)
 
 #### Proporción femenina por década y categoría (heatmap)

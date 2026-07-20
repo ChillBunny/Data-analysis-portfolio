@@ -20,8 +20,8 @@ Analyzing the performance of schools is important for a variety of stakeholders,
 
 1. **Best math schools (average ≥ 640, i.e. 80% of 800):** only 10 schools make the cut, led by **Stuyvesant High School (754)**, Bronx High School of Science (714) and Staten Island Technical (711).
 2. **Top 10 by total SAT:** Stuyvesant again dominates with **2,144 of 2,400** — almost 100 points above the runner-ups (Bronx Science and Staten Island Tech, 2,041 each).
-3. **Borough with the largest spread: Manhattan** (std = 230.3 across its 89 schools, average 1,340) — home to both elite schools and struggling ones, the widest inequality of results in the city.
-4. *(Expansion)* **The three sections move together:** math/reading/writing correlate at 0.93+, so a school strong in one section is almost always strong in the rest.
+3. **Borough with the most unequal results: Manhattan** (std = 230.3 across its 89 schools, average 1,340). In plain words: Manhattan has both the city's best schools and some of its weakest, so the gap between its schools is the widest — that's what a large standard deviation means here.
+4. *(Expansion)* **Being good at one section predicts the others:** each dot in the scatter plots below is a school — they line up almost perfectly (reading vs writing r = 0.985, math vs reading r = 0.928). A school strong in one subject is almost always strong in the rest; weak schools are weak across the board.
 
 #### Schools with average math ≥ 640
 ![Best math schools](images/best_math_schools.png)
@@ -29,14 +29,14 @@ Analyzing the performance of schools is important for a variety of stakeholders,
 #### Top 10 schools by total SAT
 ![Top 10 schools](images/top_10_schools.png)
 
-#### Spread of total SAT by borough (std)
+#### Which borough has the most unequal school results?
 ![Borough std](images/borough_std.png)
 
 #### Total SAT distribution by borough
 ![Borough distributions](images/borough_distributions.png)
 
-#### Correlation between SAT sections
-![Section correlation](images/section_correlation.png)
+#### Being good at one section predicts the others
+![Section relationship](images/section_relationship.png)
 
 ### Run it
 
@@ -71,8 +71,8 @@ Analizar el desempeño de las escuelas importa a muchos actores: profesionales d
 
 1. **Mejores escuelas en matemáticas (promedio ≥ 640, es decir 80% de 800):** solo 10 escuelas lo logran, lideradas por **Stuyvesant High School (754)**, Bronx High School of Science (714) y Staten Island Technical (711).
 2. **Top 10 por SAT total:** Stuyvesant domina de nuevo con **2,144 de 2,400** — casi 100 puntos sobre los segundos lugares (Bronx Science y Staten Island Tech, 2,041 cada una).
-3. **Distrito con mayor dispersión: Manhattan** (desviación estándar = 230.3 entre sus 89 escuelas, promedio 1,340) — alberga tanto escuelas de élite como escuelas rezagadas: la mayor desigualdad de resultados de la ciudad.
-4. *(Expansión)* **Las tres secciones se mueven juntas:** matemáticas/lectura/escritura correlacionan a 0.93+, así que una escuela fuerte en una sección casi siempre es fuerte en las demás.
+3. **Distrito con los resultados más desiguales: Manhattan** (desviación estándar = 230.3 entre sus 89 escuelas, promedio 1,340). En palabras simples: Manhattan tiene a la vez las mejores escuelas de la ciudad y algunas de las más débiles, así que la brecha entre sus escuelas es la más amplia — eso es lo que significa aquí una desviación estándar grande.
+4. *(Expansión)* **Ser bueno en una sección predice las demás:** cada punto de los gráficos de dispersión de abajo es una escuela — se alinean casi perfectamente (lectura vs escritura r = 0.985, matemáticas vs lectura r = 0.928). Una escuela fuerte en una materia casi siempre es fuerte en el resto; las débiles son débiles en todo.
 
 #### Escuelas con promedio de matemáticas ≥ 640
 ![Mejores escuelas en matemáticas](images/best_math_schools.png)
@@ -80,14 +80,14 @@ Analizar el desempeño de las escuelas importa a muchos actores: profesionales d
 #### Top 10 escuelas por SAT total
 ![Top 10 escuelas](images/top_10_schools.png)
 
-#### Dispersión del SAT total por distrito (desv. est.)
+#### ¿Qué distrito tiene los resultados escolares más desiguales?
 ![Desviación por distrito](images/borough_std.png)
 
 #### Distribución del SAT total por distrito
 ![Distribuciones por distrito](images/borough_distributions.png)
 
-#### Correlación entre secciones del SAT
-![Correlación de secciones](images/section_correlation.png)
+#### Ser bueno en una sección predice las demás
+![Relación entre secciones](images/section_relationship.png)
 
 ### Cómo ejecutarlo
 

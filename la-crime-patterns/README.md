@@ -37,7 +37,7 @@ You have been asked to support the Los Angeles Police Department (LAPD) by analy
 - **Summer is the top crime season** (55,007) and winter the calmest (28,879).
 - **The #1 crime in LA is THEFT OF IDENTITY** (22,670 reports) — ahead of simple assault (19,694) and burglary from vehicle (13,799). The city's most common crime is digital, not physical.
 - **When a weapon is reported, it's usually no weapon at all:** strong-arm (hands, fists, feet) dominates with 39,889 cases, far above handguns (4,395).
-- **Victims by sex are nearly even:** 93,008 male vs 89,854 female.
+- **Victims by sex are nearly even:** 93,008 male vs 89,854 female. *(Data-quality find: 30 records carry an invalid code "H" — the data dictionary only defines F, M and X — so they were excluded from the chart.)*
 
 #### Crimes by hour of day
 ![Crimes by hour](images/crimes_by_hour.png)
@@ -110,7 +110,7 @@ Te han pedido apoyar al Departamento de Policía de Los Ángeles (LAPD) analizan
 - **El verano es la temporada con más crímenes** (55,007) y el invierno la más tranquila (28,879).
 - **El crimen #1 de LA es el ROBO DE IDENTIDAD** (22,670 reportes) — por encima de la agresión simple (19,694) y el robo a vehículos (13,799). El crimen más común de la ciudad es digital, no físico.
 - **Cuando se reporta un arma, usualmente no es un arma:** la fuerza física (manos, puños, pies) domina con 39,889 casos, muy por encima de las pistolas (4,395).
-- **Víctimas por sexo casi parejas:** 93,008 hombres vs 89,854 mujeres.
+- **Víctimas por sexo casi parejas:** 93,008 hombres vs 89,854 mujeres. *(Hallazgo de calidad de datos: 30 registros traen un código inválido "H" — el diccionario solo define F, M y X — así que fueron excluidos del gráfico.)*
 
 #### Crímenes por hora del día
 ![Crímenes por hora](images/crimes_by_hour.png)

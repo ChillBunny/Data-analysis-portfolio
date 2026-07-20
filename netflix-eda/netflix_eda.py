@@ -91,7 +91,38 @@ plt.tight_layout()
 plt.savefig("images/top_countries.png", dpi=150)
 plt.close()
 
-# --- 5. The 1990s: the decade the brief asked about --------------------------
+# --- 5. Releases per year: how the catalog grew ------------------------------
+
+releases_per_year = netflix_df["release_year"].value_counts().sort_index()
+
+plt.figure(figsize=(11, 5))
+plt.fill_between(releases_per_year.index, releases_per_year.values, color="#B81D24", alpha=0.35)
+plt.plot(releases_per_year.index, releases_per_year.values, color="#B81D24")
+plt.title("Titles in the catalog by release year (1942-2021)")
+plt.xlabel("Release year")
+plt.ylabel("Number of titles")
+plt.tight_layout()
+plt.savefig("images/releases_per_year.png", dpi=150)
+plt.close()
+
+# --- 6. Movie duration by genre (whole catalog) ------------------------------
+
+top6_genres = netflix_df["genre"].value_counts().head(6).index
+movies_top_genres = netflix_df[(netflix_df["type"] == "Movie") & (netflix_df["genre"].isin(top6_genres))]
+
+plt.figure(figsize=(11, 6))
+sns.boxplot(data=movies_top_genres, x="genre", y="duration", palette="Set2", hue="genre", legend=False)
+plt.title("Movie duration by genre (top 6 genres, whole catalog)")
+plt.xlabel("")
+plt.ylabel("Duration (minutes)")
+plt.tight_layout()
+plt.savefig("images/duration_by_genre.png", dpi=150)
+plt.close()
+
+print("\nMedian duration by genre (top 6):")
+print(movies_top_genres.groupby("genre", observed=True)["duration"].median().sort_values(ascending=False))
+
+# --- 7. The 1990s: the decade the brief asked about --------------------------
 
 movies_90s = netflix_df[
     (netflix_df["release_year"] >= 1990)
