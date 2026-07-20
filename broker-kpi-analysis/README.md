@@ -2,9 +2,29 @@
 
 Comparative dashboard of 11 brokers in the Dominican securities market: average annual return, risk rating (1-9), fees, assets under management (AUM) and order execution rate, compared through scatter matrices (risk/return, fees/return, execution/risk, AUM/return).
 
-**About the data:** simulated. Broker names and SIVCV codes belong to real registered brokers, but every figure is fictional. The value here is the comparative KPI framework applied to the real structure of the market.
+**About the data:** simulated. Broker names and SIVCV codes come from public information, but every figure is fictional. The value here is the comparative KPI framework applied to the real structure of the market. **Read the full disclaimer below before drawing any conclusion from this project.**
 
-**Why this project:** I follow the Dominican securities market closely (my goal is a Master's in Economics) and I built this to explore how you'd actually compare brokers if the data were public.
+**Why this project:** I follow the Dominican securities market closely (my goal is a Master's in Economics). I built this as a personal portfolio piece to demonstrate my KPI-analysis skills when introducing myself, CV in hand, to representatives of the brokerage firm Parval at the PUCMM job fair in Santiago. In other words: a job-seeking demo, nothing more.
+
+## ⚠️ Disclaimer / Descargo de responsabilidad
+
+**English:**
+
+- **Every numerical figure in this project is FICTIONAL.** Returns, risk ratings, fees, assets under management and execution rates were invented by me for demonstration purposes. They are NOT real financial data, they were NOT measured, estimated or leaked from any source, and they do NOT reflect the actual performance, conduct, quality or ranking of any real person or firm. Any resemblance to real figures is pure coincidence.
+- **Names and SIVCV license codes** were taken exclusively from the **public registry of securities brokers** published by the Superintendencia del Mercado de Valores de la República Dominicana (SIMV), which is freely accessible public information. No private, confidential or privileged data of any kind was used or accessed.
+- This project has **no affiliation with, endorsement by, or connection to** Parval, the SIMV, the BVRD, or any broker or institution named here.
+- This is **not investment advice** and must not be used to compare, evaluate or choose real brokers or firms.
+- **Purpose and context:** built in 2026 as a personal exercise to showcase data-analysis skills during a job search (presented alongside my CV at a university job fair). Educational and demonstrative use only.
+- **Good faith clause:** if any person named here wishes to have their name removed or anonymized, contact me (Maire505@hotmail.com) and I will do so immediately.
+
+**Español:**
+
+- **Todas las cifras de este proyecto son FICTICIAS.** Retornos, clasificaciones de riesgo, comisiones, activos bajo gestión y tasas de ejecución fueron inventados por mí con fines demostrativos. NO son datos financieros reales, NO fueron medidos, estimados ni filtrados de ninguna fuente, y NO reflejan el desempeño, conducta, calidad ni ranking real de ninguna persona o entidad. Cualquier parecido con cifras reales es pura coincidencia.
+- **Los nombres y códigos de licencia SIVCV** provienen exclusivamente del **registro público de corredores de valores** publicado por la Superintendencia del Mercado de Valores de la República Dominicana (SIMV), información pública de libre acceso. No se usó ni se accedió a ningún dato privado, confidencial o privilegiado.
+- Este proyecto **no tiene afiliación, respaldo ni conexión** con Parval, la SIMV, la BVRD, ni con ningún corredor o institución aquí mencionada.
+- Esto **no es asesoría de inversión** y no debe usarse para comparar, evaluar o elegir corredores o entidades reales.
+- **Propósito y contexto:** creado en 2026 como ejercicio personal para demostrar habilidades de análisis de datos durante una búsqueda de empleo (presentado junto a mi CV en una feria de empleo universitaria). Uso exclusivamente educativo y demostrativo.
+- **Cláusula de buena fe:** si alguna persona aquí nombrada desea que su nombre sea retirado o anonimizado, puede contactarme (Maire505@hotmail.com) y lo haré de inmediato.
 
 ## Results
 

@@ -1,8 +1,10 @@
 # Comparative KPI Analysis of Stock Brokers — Dominican securities market
 #
-# IMPORTANT: the data below is SIMULATED. Broker names and SIVCV codes belong to
-# real registered brokers, but every figure (returns, fees, AUM, execution) is
-# fictional. The point of the project is the comparative KPI framework, not the numbers.
+# IMPORTANT: the data below is SIMULATED. Broker names and SIVCV codes come from
+# the PUBLIC registry of the Superintendencia del Mercado de Valores (SIMV), but
+# every figure (returns, fees, AUM, execution) is fictional and invented for
+# demonstration purposes. See the full disclaimer in README.md — this is a
+# portfolio exercise, not real financial data and not investment advice.
 
 import pandas as pd
 import matplotlib.pyplot as plt
