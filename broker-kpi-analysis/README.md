@@ -8,11 +8,38 @@ Comparative dashboard of 11 brokers in the Dominican securities market: average 
 
 ## Results
 
+**Broker comparison, sorted by average annual return** *(simulated figures)*:
+
+| Broker | Avg. annual return (%) | Risk (1-9) | Fees (%) | AUM (MM USD) | Order execution (%) |
+|--------|-----------------------:|-----------:|---------:|-------------:|--------------------:|
+| Leyvi Castillo (SIVCV-366) | 15.7 | 9 | 0.40 | 950 | 97.1 |
+| Nathalie Machado (SIVCV-169) | 14.8 | 4 | 0.30 | 1,800 | 98.9 |
+| Maria Jose Chami (SIVCV-474) | 13.9 | 3 | 0.18 | 1,650 | 96.7 |
+| Wendy Peña (SIVCV-531) | 13.2 | 5 | 0.25 | 1,450 | 97.5 |
+| Jean Elmúdesi (SIVCV-218) | 12.2 | 5 | 0.22 | 1,700 | 95.9 |
+| Luis Molina (SIVCV-441) | 11.3 | 6 | 0.27 | 1,400 | 94.8 |
+| Pedro Ciccone (SIVCV-440) | 11.0 | 6 | 0.10 | 1,600 | 96.2 |
+| Nabila Ramia (SIVCV-140) | 10.7 | 2 | 0.15 | 1,100 | 93.5 |
+| Mario Mera (SIVCV-519) | 9.1 | 8 | 0.20 | 1,300 | 94.4 |
+| Omar Paula (SIVCV-397) | 8.3 | 7 | 0.35 | 900 | 92.8 |
+| Maria Lembert (SIVCV-333) | 6.2 | 1 | 0.12 | 750 | 95.1 |
+
+The quick read: the top returns sit at opposite risk profiles — Castillo chases return with the highest risk rating (9) and the highest fees, while Machado gets nearly the same return at risk 4 with the best execution rate (98.9%). Volume doesn't buy performance either: the biggest books (AUM) aren't the best returns.
+
+### Risk vs Annual Return
 ![Risk vs Return](images/risk_vs_return.png)
 
+### Fees vs Average Return
+![Fees vs Return](images/fees_vs_return.png)
+
+### Order Execution vs Risk
+![Execution vs Risk](images/execution_vs_risk.png)
+
+### Return vs Assets Under Management
 ![Return vs AUM](images/return_vs_aum.png)
 
-More charts in [`images/`](./images): fees vs return, execution vs risk, risk vs AUM.
+### Risk vs Assets Under Management
+![Risk vs AUM](images/risk_vs_aum.png)
 
 ## Run it
 
