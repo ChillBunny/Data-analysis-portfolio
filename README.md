@@ -12,6 +12,8 @@ Each folder is a self-contained project: code, a **bilingual README (English + E
 | [fifa-hypothesis-test](./fifa-hypothesis-test) | Are more goals scored in women's FIFA World Cup matches than in men's? | Python · Pandas · Pingouin · SciPy |
 | [netflix-eda](./netflix-eda) | What does the Netflix catalog look like across decades, genres and durations? | Python · Pandas · Seaborn |
 | [la-crime-patterns](./la-crime-patterns) | When, where and against whom do crimes happen in Los Angeles? | Python · Pandas · Seaborn |
+| [nobel-prize-winners](./nobel-prize-winners) | Who wins the Nobel Prize, and how has female representation evolved since 1901? | Python · Pandas · NumPy · Seaborn |
+| [nyc-schools-scores](./nyc-schools-scores) | Which NYC public schools lead the SAT, and which borough has the widest inequality? | Python · Pandas · Seaborn |
 
 **Note on the broker project:** its data is SIMULATED. Broker names and SIVCV codes belong to real registered brokers of the Dominican securities market (public information), but every figure is fictional — the project is about the comparative KPI framework, not the numbers. See its full disclaimer.
 
@@ -33,6 +35,8 @@ Cada carpeta es un proyecto autocontenido: código, un **README bilingüe (ingl�
 | [fifa-hypothesis-test](./fifa-hypothesis-test) | ¿Se anotan más goles en los mundiales femeninos que en los masculinos? | Python · Pandas · Pingouin · SciPy |
 | [netflix-eda](./netflix-eda) | ¿Cómo luce el catálogo de Netflix a través de décadas, géneros y duraciones? | Python · Pandas · Seaborn |
 | [la-crime-patterns](./la-crime-patterns) | ¿Cuándo, dónde y contra quién ocurren los crímenes en Los Ángeles? | Python · Pandas · Seaborn |
+| [nobel-prize-winners](./nobel-prize-winners) | ¿Quién gana el Premio Nobel, y cómo ha evolucionado la representación femenina desde 1901? | Python · Pandas · NumPy · Seaborn |
+| [nyc-schools-scores](./nyc-schools-scores) | ¿Qué escuelas públicas de NYC lideran el SAT, y qué distrito tiene la mayor desigualdad? | Python · Pandas · Seaborn |
 
 **Nota sobre el proyecto de corredores:** sus datos son SIMULADOS. Los nombres y códigos SIVCV pertenecen a corredores reales registrados del mercado de valores dominicano (información pública), pero todas las cifras son ficticias — el proyecto trata del marco comparativo de KPIs, no de los números. Ver su descargo de responsabilidad completo.
 
