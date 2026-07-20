@@ -1,8 +1,10 @@
 # Data Analysis Portfolio — Aglis Tamayo
 
+## 🇬🇧 English version
+
 Data analyst from Santiago de los Caballeros, Dominican Republic. Python, SQL, statistics, and a special interest in financial markets.
 
-Each folder is a self-contained project: code, a short README, and an `images/` folder with the resulting charts.
+Each folder is a self-contained project: code, a **bilingual README (English + Español)** and an `images/` folder with the resulting charts.
 
 | Project | Question | Stack |
 |---------|----------|-------|
@@ -11,11 +13,11 @@ Each folder is a self-contained project: code, a short README, and an `images/` 
 | [netflix-eda](./netflix-eda) | What does the Netflix catalog look like across decades, genres and durations? | Python · Pandas · Seaborn |
 | [la-crime-patterns](./la-crime-patterns) | When, where and against whom do crimes happen in Los Angeles? | Python · Pandas · Seaborn |
 
-**Note on the broker project:** its data is SIMULATED. Broker names and SIVCV codes belong to real registered brokers of the Dominican securities market, but every figure is fictional — the project is about the comparative KPI framework, not the numbers. It runs as-is with its own embedded data.
+**Note on the broker project:** its data is SIMULATED. Broker names and SIVCV codes belong to real registered brokers of the Dominican securities market (public information), but every figure is fictional — the project is about the comparative KPI framework, not the numbers. See its full disclaimer.
 
-The other datasets come from DataCamp guided projects; the FIFA datasets (public football results) are included so that project runs end to end.
+The FIFA and Netflix datasets are included so those projects run end to end; the remaining datasets come from DataCamp guided projects.
 
-Every project README is **bilingual** (English + Español).
+📫 Maire505@hotmail.com · [LinkedIn](https://www.linkedin.com/in/aglis-tamayo/)
 
 ---
 
@@ -23,7 +25,7 @@ Every project README is **bilingual** (English + Español).
 
 Analista de datos de Santiago de los Caballeros, República Dominicana. Python, SQL, estadística, y un interés especial en los mercados financieros.
 
-Cada carpeta es un proyecto autocontenido: código, un README corto **bilingüe (inglés + español)** y una carpeta `images/` con los gráficos resultantes.
+Cada carpeta es un proyecto autocontenido: código, un **README bilingüe (inglés + español)** y una carpeta `images/` con los gráficos resultantes.
 
 | Proyecto | Pregunta | Stack |
 |----------|----------|-------|
@@ -32,6 +34,8 @@ Cada carpeta es un proyecto autocontenido: código, un README corto **bilingüe 
 | [netflix-eda](./netflix-eda) | ¿Cómo luce el catálogo de Netflix a través de décadas, géneros y duraciones? | Python · Pandas · Seaborn |
 | [la-crime-patterns](./la-crime-patterns) | ¿Cuándo, dónde y contra quién ocurren los crímenes en Los Ángeles? | Python · Pandas · Seaborn |
 
-**Nota sobre el proyecto de corredores:** sus datos son SIMULADOS — los nombres y códigos SIVCV son de corredores reales registrados (información pública), pero todas las cifras son ficticias; el proyecto trata del marco comparativo de KPIs, no de los números. Ver su descargo de responsabilidad completo.
+**Nota sobre el proyecto de corredores:** sus datos son SIMULADOS. Los nombres y códigos SIVCV pertenecen a corredores reales registrados del mercado de valores dominicano (información pública), pero todas las cifras son ficticias — el proyecto trata del marco comparativo de KPIs, no de los números. Ver su descargo de responsabilidad completo.
+
+Los datasets de FIFA y Netflix están incluidos para que esos proyectos corran de punta a punta; los demás provienen de proyectos guiados de DataCamp.
 
 📫 Maire505@hotmail.com · [LinkedIn](https://www.linkedin.com/in/aglis-tamayo/)
