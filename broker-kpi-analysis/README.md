@@ -71,3 +71,26 @@ python broker_kpi_analysis.py
 Charts are saved to `images/` automatically.
 
 **Stack:** Python · Pandas · Matplotlib · Seaborn
+
+---
+
+## 🇪🇸 Versión en español
+
+### Qué es
+
+Dashboard comparativo de 11 corredores del mercado de valores dominicano con datos **simulados**: retorno promedio anual, clasificación de riesgo (1-9), comisiones, activos bajo gestión (AUM) y tasa de ejecución de órdenes, comparados mediante matrices de dispersión (riesgo/retorno, comisiones/retorno, ejecución/riesgo, AUM/retorno).
+
+**Por qué este proyecto:** sigo de cerca el mercado de valores dominicano (mi meta es una maestría en Economía) y lo construí como pieza de portafolio personal para demostrar mis habilidades de análisis de KPIs al presentarme, CV en mano, ante representantes del puesto de bolsa Parval en la feria de empleo de la PUCMM en Santiago. Es decir: una demostración para buscar empleo, nada más.
+
+### La lectura rápida de los resultados
+
+Los mejores retornos viven en perfiles de riesgo opuestos: Castillo persigue el retorno con la clasificación de riesgo más alta (9) y las comisiones más caras, mientras que Machado logra casi el mismo retorno con riesgo 4 y la mejor tasa de ejecución (98.9%). Y el volumen no compra rendimiento: los libros más grandes (AUM) no son los mejores retornos.
+
+### Cómo ejecutarlo
+
+```bash
+pip install pandas matplotlib seaborn
+python broker_kpi_analysis.py
+```
+
+Los gráficos se guardan en `images/` automáticamente. *(El descargo de responsabilidad completo en español está más arriba.)*

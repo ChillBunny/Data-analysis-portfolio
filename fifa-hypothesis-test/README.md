@@ -53,3 +53,46 @@ python fifa_hypothesis_test.py
 The boxplot is saved to `images/` automatically. Datasets (`women_results.csv`, `men_results.csv`) contain public international football results and are included.
 
 **Stack:** Python · Pandas · Pingouin · SciPy · Matplotlib
+
+---
+
+## 🇪🇸 Versión en español
+
+> **Origen:** este fue uno de los proyectos finales de mi **curso de Data Analyst en DataCamp**, resuelto en DataLab. El notebook original está incluido ([`notebook.ipynb`](./notebook.ipynb)); `fifa_hypothesis_test.py` es la versión limpia y ejecutable.
+
+### El planteamiento
+
+Trabajas como periodista deportivo en un medio digital grande, especializado en análisis de fútbol. Tras años viendo partidos internacionales masculinos y femeninos, tu instinto te dice que en los partidos femeninos se anotan más goles que en los masculinos. Sería un gran artículo de investigación — pero necesitas un test de hipótesis estadístico válido para afirmarlo.
+
+Como el deporte ha cambiado mucho con los años y el rendimiento varía según el torneo, el análisis se limita a partidos oficiales de **Copa del Mundo FIFA** (sin eliminatorias) desde el **01-01-2002**.
+
+La pregunta: **¿se anotan más goles en los partidos internacionales femeninos que en los masculinos?**
+
+Con un nivel de significancia del **10%**:
+
+- **H₀:** la media de goles en partidos femeninos es igual a la de los masculinos.
+- **Hₐ:** la media de goles en partidos femeninos es mayor.
+
+### Método
+
+1. Filtrar ambos datasets a partidos oficiales de Copa del Mundo desde 2002.
+2. Calcular los goles totales por partido (local + visitante).
+3. Los conteos de goles no siguen una distribución normal, así que la herramienta correcta es el **test de Mann-Whitney U** (no paramétrico), de una cola, con `pingouin.mwu`.
+4. Decidir contra **α = 0.10**.
+
+### Resultados
+
+- Mujeres: n=200 partidos, media **2.98** goles/partido (desv. 2.02)
+- Hombres: n=384 partidos, media **2.51** goles/partido (desv. 1.65)
+- **p = 0.0051 < 0.10 → se rechaza H₀.**
+
+**Veredicto:** el instinto era correcto, y ahora tiene respaldo estadístico: en las Copas del Mundo femeninas se anotan significativamente más goles que en las masculinas (aproximadamente medio gol más por partido en promedio).
+
+### Cómo ejecutarlo
+
+```bash
+pip install pandas matplotlib pingouin
+python fifa_hypothesis_test.py
+```
+
+El boxplot se guarda en `images/` automáticamente. Los datasets contienen resultados públicos de fútbol internacional y están incluidos.
