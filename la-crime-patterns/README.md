@@ -38,6 +38,7 @@ You have been asked to support the Los Angeles Police Department (LAPD) by analy
 - **The #1 crime in LA is THEFT OF IDENTITY** (22,670 reports) — ahead of simple assault (19,694) and burglary from vehicle (13,799). The city's most common crime is digital, not physical.
 - **When a weapon is reported, it's usually no weapon at all:** strong-arm (hands, fists, feet) dominates with 39,889 cases, far above handguns (4,395).
 - **Victims by sex are nearly even:** 93,008 male vs 89,854 female. *(Data-quality find: 30 records carry an invalid code "H" — the data dictionary only defines F, M and X — so they were excluded from the chart.)*
+- **Weighted by population, men face more risk:** relative to each sex's share of LA's population (U.S. Census 2020), men suffer **4,810 victimizations per 100,000 residents vs 4,573 for women — 5.2% more per capita**. Note: this dataset records *victims*, not perpetrators; and "X: unknown" cannot be weighted because there is no census baseline for "unknown".
 
 #### Crimes by hour of day
 ![Crimes by hour](images/crimes_by_hour.png)
@@ -59,6 +60,9 @@ You have been asked to support the Los Angeles Police Department (LAPD) by analy
 
 #### Crime victims by sex
 ![Victims by sex](images/victims_by_sex.png)
+
+#### Victims per 100,000 residents, by sex (population-weighted)
+![Victims per capita](images/victims_per_capita.png)
 
 ### Run it
 
@@ -111,6 +115,7 @@ Te han pedido apoyar al Departamento de Policía de Los Ángeles (LAPD) analizan
 - **El crimen #1 de LA es el ROBO DE IDENTIDAD** (22,670 reportes) — por encima de la agresión simple (19,694) y el robo a vehículos (13,799). El crimen más común de la ciudad es digital, no físico.
 - **Cuando se reporta un arma, usualmente no es un arma:** la fuerza física (manos, puños, pies) domina con 39,889 casos, muy por encima de las pistolas (4,395).
 - **Víctimas por sexo casi parejas:** 93,008 hombres vs 89,854 mujeres. *(Hallazgo de calidad de datos: 30 registros traen un código inválido "H" — el diccionario solo define F, M y X — así que fueron excluidos del gráfico.)*
+- **Ponderado por población, los hombres enfrentan más riesgo:** relativo a la proporción de cada sexo en la población de LA (Censo de EE.UU. 2020), los hombres sufren **4,810 victimizaciones por cada 100,000 residentes vs 4,573 las mujeres — 5.2% más per cápita**. Nota: este dataset registra *víctimas*, no perpetradores; y "X: desconocido" no puede ponderarse porque no existe una base censal de "desconocidos".
 
 #### Crímenes por hora del día
 ![Crímenes por hora](images/crimes_by_hour.png)
@@ -132,6 +137,9 @@ Te han pedido apoyar al Departamento de Policía de Los Ángeles (LAPD) analizan
 
 #### Víctimas por sexo
 ![Víctimas por sexo](images/victims_by_sex.png)
+
+#### Víctimas por cada 100,000 residentes, por sexo (ponderado por población)
+![Víctimas per cápita](images/victims_per_capita.png)
 
 ### Cómo ejecutarlo
 

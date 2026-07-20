@@ -1,4 +1,4 @@
-# Exploring NYC Public School Test Result Scores / Explorando los resultados SAT de las escuelas públicas de NYC
+﻿# Exploring NYC Public School Test Result Scores / Explorando los resultados SAT de las escuelas públicas de NYC
 
 ## 🇬🇧 English version
 
@@ -29,7 +29,7 @@ Analyzing the performance of schools is important for a variety of stakeholders,
 #### Top 10 schools by total SAT
 ![Top 10 schools](images/top_10_schools.png)
 
-#### Which borough has the most unequal school results?
+#### Which borough's school results vary the most?
 ![Borough std](images/borough_std.png)
 
 #### Total SAT distribution by borough
@@ -80,7 +80,7 @@ Analizar el desempeño de las escuelas importa a muchos actores: profesionales d
 #### Top 10 escuelas por SAT total
 ![Top 10 escuelas](images/top_10_schools.png)
 
-#### ¿Qué distrito tiene los resultados escolares más desiguales?
+#### ¿Qué distrito tiene los resultados escolares que más varían?
 ![Desviación por distrito](images/borough_std.png)
 
 #### Distribución del SAT total por distrito

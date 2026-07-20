@@ -111,7 +111,9 @@ plt.close()
 
 # --- 6. Weapons: what's actually used -----------------------------------------
 
-top_weapons = crimes["Weapon Desc"].value_counts().head(8)
+# Label cleanup: the raw LAPD categories come with typos like "6INCHES"
+crimes["Weapon Desc Clean"] = crimes["Weapon Desc"].str.replace("6INCHES", "6 INCHES", regex=False)
+top_weapons = crimes["Weapon Desc Clean"].value_counts().head(8)
 print(f"\nTop 8 weapons (when reported):\n{top_weapons}")
 
 plt.figure(figsize=(11, 5))
@@ -143,6 +145,37 @@ plt.xlabel("Victim sex")
 plt.ylabel("Frequency")
 plt.tight_layout()
 plt.savefig("images/victims_by_sex.png", dpi=150)
+plt.close()
+
+# --- 8. Victims per capita: weighting by population share ----------------------
+# Raw counts are nearly even, but do men and women face the same RISK relative
+# to their population size? Weighting by the City of LA population
+# (U.S. Census 2020: ~3,898,747 residents; ~50.4% female, ~49.6% male).
+# "X: unknown" cannot be weighted — there is no census baseline for "unknown".
+
+LA_POP_TOTAL = 3_898_747
+LA_POP_F = round(LA_POP_TOTAL * 0.504)
+LA_POP_M = round(LA_POP_TOTAL * 0.496)
+
+per_capita = pd.Series({
+    "M": vict_sex["M"] / LA_POP_M * 100_000,
+    "F": vict_sex["F"] / LA_POP_F * 100_000,
+})
+print(f"\nVictims per 100,000 residents (2020-2023 reports, Census 2020 population):")
+print(per_capita.round(0))
+print(f"Men face {(per_capita['M'] / per_capita['F'] - 1) * 100:.1f}% more victimization per capita than women.")
+
+plt.figure(figsize=(7, 5))
+bars = plt.bar(per_capita.index.astype(str), per_capita.values, color=sex_colors[:2][::-1], width=0.5)
+for bar, value in zip(bars, per_capita.values):
+    plt.text(bar.get_x() + bar.get_width() / 2, value + 40, f"{value:,.0f}", ha="center", fontweight="bold")
+plt.suptitle("Victims per 100,000 residents, by sex", fontsize=13, y=0.97)
+plt.title("Weighted by each sex's share of LA's population (Census 2020). X excluded: no census baseline for 'unknown'.",
+          fontsize=8, color="#555555", pad=12)
+plt.xlabel("Victim sex")
+plt.ylabel("Victims per 100,000 residents")
+plt.tight_layout(rect=[0, 0, 1, 0.94])
+plt.savefig("images/victims_per_capita.png", dpi=150)
 plt.close()
 
 print("\nCharts saved to images/")

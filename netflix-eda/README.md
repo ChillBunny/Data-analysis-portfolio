@@ -1,4 +1,4 @@
-# Netflix Catalog — Exploratory Data Analysis / Catálogo de Netflix — Análisis exploratorio de datos
+﻿# Netflix Catalog — Exploratory Data Analysis / Catálogo de Netflix — Análisis exploratorio de datos
 
 ## 🇬🇧 English version
 
@@ -44,10 +44,10 @@ You work for a production company that specializes in nostalgic styles. You want
 #### Top 10 producing countries
 ![Top countries](images/top_countries.png)
 
-#### Titles by release year: how the catalog grew
+#### Titles by release year: how the catalog grew (1942-2020; 2021 cut as incomplete)
 ![Releases per year](images/releases_per_year.png)
 
-#### Movie duration by genre (whole catalog)
+#### Movie duration by genre (top 6 genres, all movies 1942-2021)
 ![Duration by genre](images/duration_by_genre.png)
 
 #### The 1990s: duration distribution
@@ -113,10 +113,10 @@ Trabajas para una productora especializada en estilos nostálgicos. Quieres inve
 #### Top 10 países productores
 ![Top países](images/top_countries.png)
 
-#### Títulos por año de lanzamiento: cómo creció el catálogo
+#### Títulos por año de lanzamiento: cómo creció el catálogo (1942-2020; 2021 cortado por incompleto)
 ![Lanzamientos por año](images/releases_per_year.png)
 
-#### Duración de películas por género (catálogo completo)
+#### Duración de películas por género (top 6 géneros, todas las películas 1942-2021)
 ![Duración por género](images/duration_by_genre.png)
 
 #### Los años 90: distribución de duraciones

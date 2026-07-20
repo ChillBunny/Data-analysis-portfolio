@@ -93,12 +93,15 @@ plt.close()
 
 # --- 5. Releases per year: how the catalog grew ------------------------------
 
+# The final year of the catalog (2021) is incomplete — cutting it so the
+# curve doesn't crash to zero and mislead the reader.
 releases_per_year = netflix_df["release_year"].value_counts().sort_index()
+releases_per_year = releases_per_year[releases_per_year.index <= 2020]
 
 plt.figure(figsize=(11, 5))
 plt.fill_between(releases_per_year.index, releases_per_year.values, color="#B81D24", alpha=0.35)
 plt.plot(releases_per_year.index, releases_per_year.values, color="#B81D24")
-plt.title("Titles in the catalog by release year (1942-2021)")
+plt.title("Titles in the catalog by release year (1942-2020; 2021 cut as an incomplete year)")
 plt.xlabel("Release year")
 plt.ylabel("Number of titles")
 plt.tight_layout()
@@ -110,9 +113,10 @@ plt.close()
 top6_genres = netflix_df["genre"].value_counts().head(6).index
 movies_top_genres = netflix_df[(netflix_df["type"] == "Movie") & (netflix_df["genre"].isin(top6_genres))]
 
+sample_min, sample_max = movies_top_genres["release_year"].min(), movies_top_genres["release_year"].max()
 plt.figure(figsize=(11, 6))
 sns.boxplot(data=movies_top_genres, x="genre", y="duration", palette="Set2", hue="genre", legend=False)
-plt.title("Movie duration by genre (top 6 genres, whole catalog)")
+plt.title(f"Movie duration by genre (top 6 genres, all movies {sample_min}-{sample_max})")
 plt.xlabel("")
 plt.ylabel("Duration (minutes)")
 plt.tight_layout()
